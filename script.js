@@ -94,7 +94,7 @@ var upperCasedCharacters = [
     function getPasswordOptions() {
       var length = prompt("Enter the desired password length:");
       length = parseInt(length);
-      if (isNaN(length) || length <= 0) {
+      if (isNaN(length) || length <= 0 || length >128) {
         alert("Please enter a valid positive number for the password length.");
         return;
       }
