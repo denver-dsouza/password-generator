@@ -94,9 +94,12 @@ var upperCasedCharacters = [
     function getPasswordOptions() {
       var length = prompt("Enter the desired password length:");
       length = parseInt(length);
-      if (isNaN(length) || length <= 0 || length >128) {
+      if (isNaN(length) || length <= 0) {
         alert("Please enter a valid positive number for the password length.");
-        return;
+        return;}
+      if (isNaN(length) || length >128 ) {
+          alert("Please enter a valid positive number less than 128 characters for the password length.");
+          return;
       }
 
       var includeUppercaseCharacters = confirm("Do you want the password to include Uppercase characters?");
